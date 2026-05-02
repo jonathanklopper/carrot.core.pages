@@ -307,9 +307,7 @@ html[data-theme="dark"] .site-page .company-mark img {
 
 .site-page #projects.content-grid {
   grid-template-columns: minmax(0, 1fr);
-  width: calc(100vw - var(--page-gutter));
-  max-width: none;
-  margin-left: calc(50% - 50vw + var(--page-gutter-side));
+  width: 100%;
 }
 
 .site-page #projects > .panel {
