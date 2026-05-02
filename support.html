@@ -22,15 +22,13 @@
         <h2>Support &amp; Feedback</h2>
         <p>
           Send app feedback, bug reports, feature requests, or support questions.
-          No GitHub account is required.
         </p>
 
         <div class="support-frame">
-          <iframe
-            data-tally-src="https://tally.so/embed/vGqN1D?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1"
+            <iframe
+            id="tally-support-form"
             loading="lazy"
             width="100%"
-            height="500"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
@@ -40,20 +38,25 @@
         </div>
 
         <script>
-          var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-            if(typeof Tally!=="undefined"){Tally.loadEmbeds();}
-            else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
-              e.src=e.dataset.tallySrc;
-            });}
-          };
-          if(typeof Tally!=="undefined")v();
-          else if(d.querySelector('script[src="'+w+'"]')==null){
-            var s=d.createElement("script");
-            s.src=w;
-            s.onload=v;
-            s.onerror=v;
-            d.body.appendChild(s);
-          }
+
+          (function () {
+            const pageParams = new URLSearchParams(window.location.search);
+            const app = pageParams.get("app") || "";
+            const tallyUrl = new URL("https://tally.so/embed/vGqN1D");
+
+            tallyUrl.searchParams.set("alignLeft", "1");
+            tallyUrl.searchParams.set("hideTitle", "1");
+            tallyUrl.searchParams.set("dynamicHeight", "1");
+
+            if (app) {
+              tallyUrl.searchParams.set("app", app);
+            }
+
+            const iframe = document.getElementById("tally-support-form");
+            iframe.src = tallyUrl.toString();
+            console.log("Tally iframe URL:", iframe.src);
+          }());
+
         </script>
       </section>
     </main>
