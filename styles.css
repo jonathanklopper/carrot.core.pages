@@ -109,25 +109,6 @@ html[data-theme="dark"] body.policy-page {
   justify-content: flex-end;
 }
 
-.theme-toggle {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 10px 14px;
-  font: inherit;
-  font-size: 0.95rem;
-  cursor: pointer;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-1px);
-  background: var(--surface-strong);
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -158,8 +139,7 @@ html[data-theme="dark"] body.policy-page {
   -webkit-backdrop-filter: blur(14px);
 }
 
-.policy-page .button,
-.policy-page .theme-toggle {
+.policy-page .button {
   border-color: var(--line);
   background: var(--surface);
   color: var(--text);
@@ -168,8 +148,7 @@ html[data-theme="dark"] body.policy-page {
   -webkit-backdrop-filter: blur(14px);
 }
 
-.policy-page .button:hover,
-.policy-page .theme-toggle:hover {
+.policy-page .button:hover {
   background: var(--surface-strong);
 }
 
@@ -412,6 +391,173 @@ html[data-theme="dark"] .site-page .project-link:hover {
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* Screenshot gallery styling */
+.screenshot-gallery {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.gallery-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 12px;
+  padding: 0 8px;
+  margin: 0 -8px;
+}
+
+.gallery-thumb {
+  width: 140px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  flex-shrink: 0;
+}
+
+.gallery-thumb:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Full image viewer */
+.full-image-viewer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.full-image-viewer.hidden {
+  display: none;
+}
+
+.image-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fullImage {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 160ms ease;
+  z-index: 1001;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 160ms ease;
+  z-index: 1001;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.prev-button {
+  left: 20px;
+}
+
+.next-button {
+  right: 20px;
+}
+
+/* Mobile responsiveness for gallery */
+@media (max-width: 640px) {
+  .gallery-thumb {
+    width: 120px;
+    height: 210px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
+
+  .close-button {
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-thumb {
+    width: 100px;
+    height: 180px;
+  }
+
+  .nav-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
 }
 
 .site-page .project-name {

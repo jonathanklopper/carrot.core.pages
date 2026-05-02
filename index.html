@@ -10,49 +10,21 @@
 </head>
 <body class="site-page">
   <div class="page-shell">
-    <header class="topbar">
-      <div></div>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-        Dark Mode
-      </button>
-    </header>
-
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <div class="brandline">Solo dev, with simple ideas, zero fluff</div>
           <h1>Carrot Core Creations</h1>
-          <p class="subtitle">Core creations, Solid principles</p>
+          <p class="subtitle">Solo dev, simple ideas, zero fluff</p>
           <p class="intro">
             Carrot Core Creations is where thoughtfully made Apple platform apps and games take shape. The goal is
             simple: build software that feels polished, playful, and pleasant to come back to instead of noisy,
             bloated, or forgettable.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">See Projects</a>
-            <a class="button button-secondary" href="#about">About the Studio</a>
-          </div>
         </div>
-
-      <div class="hero-art" aria-hidden="true">
+        <div class="hero-art" aria-hidden="true">
           <div class="icon-panel">
             <img src="./CCSquare.png" alt="Carrot Core Creations logo">
           </div>
-        </div>
-      </section>
-
-      <section class="capability-strip" id="capabilities">
-        <div>
-          <span class="metric-label">Carrot</span>
-          <span class="metric-value">Fresh and Simple</span>
-        </div>
-        <div>
-          <span class="metric-label">Core</span>
-          <span class="metric-value">Strong Foundation</span>
-        </div>
-        <div>
-          <span class="metric-label">Creations</span>
-          <span class="metric-value">From concept to creation</span>
         </div>
       </section>
 
@@ -89,17 +61,6 @@
               </span>
             </a>
           </div>
-        </article>
-        <article class="panel">
-          <h2>Apps</h2>
-          <p>
-            Carrot Core Creations exists to make software with a point of view. Not everything needs to be massive,
-            noisy, subscription-shaped, or trying to become a platform.
-          </p>
-          <p>
-            Sometimes a good app should just do its thing well. Sometimes a good game should just feel nice to touch.
-            That is the lane.
-          </p>
         </article>
       </section>
 
@@ -157,25 +118,15 @@
   <script>
     (function () {
       const root = document.documentElement;
-      const button = document.getElementById("themeToggle");
-      const storageKey = "carrot-core-creations-theme";
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-      function applyTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        button.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
       }
 
-      const storedTheme = localStorage.getItem(storageKey);
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme = storedTheme || (preferredDark ? "dark" : "light");
+      applySystemTheme();
 
-      applyTheme(initialTheme);
-
-      button.addEventListener("click", function () {
-        const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-        localStorage.setItem(storageKey, nextTheme);
-        applyTheme(nextTheme);
-      });
+      systemTheme.addEventListener("change", applySystemTheme);
     }());
   </script>
 </body>

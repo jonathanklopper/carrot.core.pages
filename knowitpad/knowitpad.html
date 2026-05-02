@@ -14,9 +14,6 @@
       <div class="brandline"></div>
       <div class="topbar-actions">
         <a class="button button-secondary" href="../index.html">Home</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-          Dark Mode
-        </button>
       </div>
     </header>
 
@@ -135,25 +132,15 @@
   <script>
     (function () {
       const root = document.documentElement;
-      const button = document.getElementById("themeToggle");
-      const storageKey = "carrot-core-creations-theme";
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-      function applyTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        button.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
       }
 
-      const storedTheme = localStorage.getItem(storageKey);
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme = storedTheme || (preferredDark ? "dark" : "light");
+      applySystemTheme();
 
-      applyTheme(initialTheme);
-
-      button.addEventListener("click", function () {
-        const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-        localStorage.setItem(storageKey, nextTheme);
-        applyTheme(nextTheme);
-      });
+      systemTheme.addEventListener("change", applySystemTheme);
     }());
   </script>
 </body>
