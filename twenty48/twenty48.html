@@ -55,11 +55,9 @@
           <span class="metric-value store-links">
             <a
               class="store-badge"
-              href="https://apps.apple.com/us/iphone/today"
-              data-ios-href="https://apps.apple.com/us/iphone/today"
-              data-mac-href="https://apps.apple.com/us/iphone/story/id1535100517"
-              target="_blank"
-              rel="noopener"
+              href="itms-apps://apps.apple.com/us/iphone/today"
+              data-ios-store-href="itms-apps://apps.apple.com/us/iphone/today"
+              data-mac-store-href="macappstore://apps.apple.com/us/iphone/story/id1535100517"
               aria-label="Open the App Store for Twenty48">
               <img src="../assets/appstore_ios.svg" alt="Download on the App Store">
             </a>
@@ -173,13 +171,13 @@
 
       systemTheme.addEventListener("change", applySystemTheme);
 
-      const storeBadge = document.querySelector("[data-ios-href][data-mac-href]");
+      const storeBadge = document.querySelector("[data-ios-store-href][data-mac-store-href]");
       const platform = navigator.platform || "";
       const userAgent = navigator.userAgent || "";
       const isIOS = /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
       if (storeBadge) {
-        storeBadge.href = isIOS ? storeBadge.dataset.iosHref : storeBadge.dataset.macHref;
+        storeBadge.href = isIOS ? storeBadge.dataset.iosStoreHref : storeBadge.dataset.macStoreHref;
       }
 
       const galleryThumbs = Array.from(document.querySelectorAll(".gallery-thumb"));
