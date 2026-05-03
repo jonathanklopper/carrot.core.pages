@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Twenty48 is a polished number puzzle game focused on smooth swipes, satisfying merges, and just one more run.">
   <link rel="icon" type="image/png" href="./icon.png">
-  <link rel="stylesheet" href="../styles.css?v=20260503-tally-page-scroll">
+  <link rel="stylesheet" href="../styles.css?v=20260503-hero-icon-align">
   <title>Twenty48</title>
 </head>
 <body class="site-page">
@@ -14,7 +14,6 @@
       <div class="topbar-actions">
         <a class="button button-secondary" href="../index.html">Back</a>
       </div>
-      <div class="brandline">Twenty48</div>
     </header>
 
     <main>
@@ -53,8 +52,18 @@
           <span class="metric-value">iPhone and iPad</span>
         </div>
         <div>
-          <span class="metric-label">Approach</span>
-          <span class="metric-value">Clean and Addictive</span>
+          <span class="metric-value store-links">
+            <a
+              class="store-badge"
+              href="https://apps.apple.com/us/iphone/today"
+              data-ios-href="https://apps.apple.com/us/iphone/today"
+              data-mac-href="https://apps.apple.com/us/iphone/story/id1535100517"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open the App Store for Twenty48">
+              <img src="../assets/appstore_ios.svg" alt="Download on the App Store">
+            </a>
+          </span>
         </div>
       </section>
 
@@ -163,6 +172,15 @@
       applySystemTheme();
 
       systemTheme.addEventListener("change", applySystemTheme);
+
+      const storeBadge = document.querySelector("[data-ios-href][data-mac-href]");
+      const platform = navigator.platform || "";
+      const userAgent = navigator.userAgent || "";
+      const isIOS = /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+      if (storeBadge) {
+        storeBadge.href = isIOS ? storeBadge.dataset.iosHref : storeBadge.dataset.macHref;
+      }
 
       const galleryThumbs = Array.from(document.querySelectorAll(".gallery-thumb"));
       const fullImageViewer = document.getElementById("fullImageViewer");

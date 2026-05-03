@@ -220,7 +220,7 @@ html[data-theme="dark"] body.policy-page {
 .site-page .hero-art {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-height: 340px;
   animation: drift 900ms ease both;
@@ -441,9 +441,10 @@ html[data-theme="dark"] .site-page .company-mark img {
 
 .site-page .project-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 18px;
   margin-top: 18px;
+  width: 100%;
 }
 
 .site-page .project-link {
@@ -452,6 +453,7 @@ html[data-theme="dark"] .site-page .company-mark img {
   gap: 16px;
   align-items: start;
   padding: 16px;
+  width: 100%;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: var(--surface-strong);
@@ -658,6 +660,7 @@ html[data-theme="dark"] .site-page .project-link:hover {
 }
 
 .site-page .capability-strip {
+  --metric-stack-height: calc(0.96rem + 8px + clamp(1.35rem, 3vw, 2.15rem));
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -671,6 +674,7 @@ html[data-theme="dark"] .site-page .project-link:hover {
   display: block;
   margin-bottom: 8px;
   font-size: 0.8rem;
+  line-height: 1.2;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -681,6 +685,37 @@ html[data-theme="dark"] .site-page .project-link:hover {
   font-size: clamp(1.35rem, 3vw, 2.15rem);
   line-height: 1;
   letter-spacing: -0.04em;
+}
+
+.site-page .metric-value.store-links {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 12px;
+  font-size: 1rem;
+  letter-spacing: 0;
+  min-height: var(--metric-stack-height);
+}
+
+.site-page .store-badge {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  height: var(--metric-stack-height);
+  min-height: 40px;
+}
+
+.site-page .store-badge:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.site-page .store-badge img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
 }
 
 .site-page .footer {
@@ -784,7 +819,8 @@ html[data-theme="dark"] .site-page .project-link:hover {
 @media (max-width: 920px) {
   .site-page .hero,
   .site-page .content-grid,
-  .site-page .capability-strip {
+  .site-page .capability-strip,
+  .site-page .project-list {
     grid-template-columns: 1fr;
   }
 
@@ -796,6 +832,7 @@ html[data-theme="dark"] .site-page .project-link:hover {
 
   .site-page .hero-art {
     order: -1;
+    justify-content: center;
     min-height: 280px;
   }
 
