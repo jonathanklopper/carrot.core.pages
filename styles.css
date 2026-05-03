@@ -408,6 +408,7 @@ html[data-theme="dark"] .site-page .company-mark img {
   border-radius: 14px;
   background: #1a1917;
   color-scheme: dark;
+  overflow: hidden;
 }
 
 .site-page .feature-list,

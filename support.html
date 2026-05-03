@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Send support requests, bug reports, feature ideas, and feedback for Carrot Core Creations apps.">
   <link rel="icon" type="image/png" href="./CCSquare.png">
-  <link rel="stylesheet" href="./styles.css?v=20260503-footer-center">
-  <title>Support &amp; Feedback</title>
+  <link rel="stylesheet" href="./styles.css?v=20260503-tally-page-scroll">
+  <title>Feedback</title>
 </head>
 <body class="site-page">
   <div class="page-shell">
@@ -19,19 +19,21 @@
 
     <main>
       <section id="support" class="support-section">
-        <h2>Support &amp; Feedback</h2>
+        <h2>Feedback</h2>
         <p>
-          Send app feedback, bug reports, feature requests, or support questions.
+          Send any app feedback or questions about the privacy policy.
         </p>
 
         <div class="support-frame">
-            <iframe
-            id="tally-support-form"
+          <iframe
+            data-tally-src="https://tally.so/embed/vGqN1D?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1"
             loading="lazy"
             width="100%"
+            height="500"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
+            scrolling="no"
             style="background-color: #1a1917;"
             title="Support &amp; Feedback">
           </iframe>
@@ -39,24 +41,34 @@
 
         <script>
 
-          (function () {
-            const pageParams = new URLSearchParams(window.location.search);
-            const app = pageParams.get("app") || "";
-            const tallyUrl = new URL("https://tally.so/embed/vGqN1D");
+          var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+            d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+              var src = e.dataset.tallySrc;
+              var pageParams = new URLSearchParams(window.location.search);
+              var app = pageParams.get("app");
+              var from = pageParams.get("from");
 
-            tallyUrl.searchParams.set("alignLeft", "1");
-            tallyUrl.searchParams.set("hideTitle", "1");
-            tallyUrl.searchParams.set("dynamicHeight", "1");
+              if(app || from){
+                var tallyUrl = new URL(src);
+                if(app){tallyUrl.searchParams.set("app", app);}
+                if(from){tallyUrl.searchParams.set("from", from);}
+                e.dataset.tallySrc = tallyUrl.toString();
+              }
+            });
 
-            if (app) {
-              tallyUrl.searchParams.set("app", app);
-            }
-
-            const iframe = document.getElementById("tally-support-form");
-            iframe.src = tallyUrl.toString();
-            console.log("Tally iframe URL:", iframe.src);
-          }());
-
+            if(typeof Tally!=="undefined"){Tally.loadEmbeds();}
+            else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+              e.src=e.dataset.tallySrc;
+            });}
+          };
+          if(typeof Tally!=="undefined")v();
+          else if(d.querySelector('script[src="'+w+'"]')==null){
+            var s=d.createElement("script");
+            s.src=w;
+            s.onload=v;
+            s.onerror=v;
+            d.body.appendChild(s);
+          }
         </script>
       </section>
     </main>
