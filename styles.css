@@ -836,6 +836,10 @@ html[data-theme="dark"] .site-page .project-link:hover {
     min-height: 280px;
   }
 
+  .site-page .metric-value.store-links {
+    justify-content: flex-start;
+  }
+
   .site-page .footer {
     flex-direction: column;
     align-items: center;
