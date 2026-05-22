@@ -45,6 +45,7 @@
 
     return {
       label: label,
+      poster: thumb.dataset.galleryPoster || "",
       source: source,
       thumb: thumb,
       type: type
@@ -71,6 +72,9 @@
       video.controls = true;
       video.autoplay = true;
       video.playsInline = true;
+      if (item.poster) {
+        video.poster = item.poster;
+      }
       video.setAttribute("aria-label", item.label);
       mediaContainer.appendChild(video);
       return;
