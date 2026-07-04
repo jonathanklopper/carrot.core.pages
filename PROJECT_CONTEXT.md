@@ -11,10 +11,10 @@ This is a static GitHub Pages site for Carrot Core Creations.
   - Knowitpad product page
 - [knowitpad/privacy.html](./knowitpad/privacy.html)
   - Knowitpad privacy page
-- [twenty48/twenty48.html](./twenty48/twenty48.html)
-  - Twenty48 product page
-- [twenty48/privacy.html](./twenty48/privacy.html)
-  - Twenty48 privacy page
+- [mergemathica/mergemathica.html](./mergemathica/mergemathica.html)
+  - Mergemathica product page
+- [mergemathica/privacy.html](./mergemathica/privacy.html)
+  - Mergemathica privacy page
 
 ## Shared Styling
 
@@ -114,8 +114,8 @@ paths = [
     'index.html',
     'knowitpad/knowitpad.html',
     'knowitpad/privacy.html',
-    'twenty48/twenty48.html',
-    'twenty48/privacy.html',
+    'mergemathica/mergemathica.html',
+    'mergemathica/privacy.html',
 ]
 for path in paths:
     with urlopen(f'http://127.0.0.1:8000/{path}') as response:

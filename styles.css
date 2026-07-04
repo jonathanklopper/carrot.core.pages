@@ -201,7 +201,7 @@ html[data-theme="dark"] body.policy-page {
   line-height: 1.2;
   color: var(--muted);
   max-width: none;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .site-page .intro {

@@ -33,11 +33,11 @@ Do not introduce React, Vue, Tailwind, Astro, Next.js, Vite, or any other framew
 - [styles.css](./styles.css): shared site stylesheet
 - [knowitpad/knowitpad.html](./knowitpad/knowitpad.html): Knowitpad product page
 - [knowitpad/privacy.html](./knowitpad/privacy.html): Knowitpad privacy page
-- [twenty48/twenty48.html](./twenty48/twenty48.html): Twenty48 product page
-- [twenty48/privacy.html](./twenty48/privacy.html): Twenty48 privacy page
+- [mergemathica/mergemathica.html](./mergemathica/mergemathica.html): Mergemathica product page
+- [mergemathica/privacy.html](./mergemathica/privacy.html): Mergemathica privacy page
 - [CCSquare.png](./CCSquare.png): shared brand icon
 - [knowitpad/icon.png](./knowitpad/icon.png): Knowitpad icon
-- [twenty48/icon.png](./twenty48/icon.png): Twenty48 icon
+- [mergemathica/icon.png](./mergemathica/icon.png): Mergemathica icon
 
 ## Working Style
 
@@ -57,8 +57,8 @@ Do not introduce React, Vue, Tailwind, Astro, Next.js, Vite, or any other framew
   - `/index.html`
   - `/knowitpad/knowitpad.html`
   - `/knowitpad/privacy.html`
-  - `/twenty48/twenty48.html`
-  - `/twenty48/privacy.html`
+  - `/mergemathica/mergemathica.html`
+  - `/mergemathica/privacy.html`
 - Do not convert the project into a SPA.
 - Do not add a dependency on server-side rendering or a runtime.
 
@@ -129,8 +129,8 @@ Then verify relevant pages load:
 - `http://127.0.0.1:8000/index.html`
 - `http://127.0.0.1:8000/knowitpad/knowitpad.html`
 - `http://127.0.0.1:8000/knowitpad/privacy.html`
-- `http://127.0.0.1:8000/twenty48/twenty48.html`
-- `http://127.0.0.1:8000/twenty48/privacy.html`
+- `http://127.0.0.1:8000/mergemathica/mergemathica.html`
+- `http://127.0.0.1:8000/mergemathica/privacy.html`
 
 Minimum validation after edits:
 
