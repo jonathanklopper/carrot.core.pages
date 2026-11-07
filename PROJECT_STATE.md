@@ -1,55 +1,48 @@
 # Project State: Carrot Core Pages
 
 ## Overview
-Static marketing and product documentation website for **Carrot Core Creations** hosted via GitHub Pages (custom domain `carrot-core.com` via Cloudflare).
+Static marketing and product documentation website for **Carrot Core Creations**, hosted via GitHub Pages (custom domain `carrot-core.com` via Cloudflare).
 
-## Current Site Architecture & Routes
+---
 
-### Root Pages
-- `index.html`: Studio homepage with hero, projects grid, about panel, and local-first privacy statement.
-- `privacy.html`: General studio privacy policy.
-- `support.html`: Support routing.
-- `styles.css`: Central shared stylesheet driving both `.site-page` and `.policy-page`.
+## Current Status & Snapshot
 
-### Product & Suite Sections
-1. **BrainIQue (`BrainIQue/`)** - Modern 5-in-1 Apple puzzle game suite:
-   - `BrainIQue/brainique.html`: Main suite showcase hub page linking to sub-games, listing features, and telemetry/privacy.
-   - `BrainIQue/privacy.html`: Privacy policy for BrainIQue.
-   - `BrainIQue/icon.png`: App suite icon.
-   - **Sub-games (`BrainIQue/games/`)**:
-     - `mergemathica/mergemathica.html`: 2048 number and logic puzzle.
-     - `thumbstack/thumbstack.html`: Reverse-Klondike numbers solitaire with frosted glass tiles.
-     - `moduku/moduku.html`: Dimension-shifting Sudoku & polyomino jigsaw logic puzzle.
-     - `ohmyword/ohmyword.html`: Fast-paced anagram and vocabulary round challenge.
-     - `woahdle/woahdle.html`: Tactical multi-length word guessing challenge.
-2. **Grave Mistake (`gravemistake/`)** - Apple Watch zombie shooter:
-   - `gravemistake/gravemistake.html`: Product page.
-   - `gravemistake/privacy.html`: Privacy policy.
-3. **Knowitpad (`knowitpad/`)** - Minimal macOS text editor:
-   - `knowitpad/knowitpad.html`: Product page.
-   - `knowitpad/privacy.html`: Privacy policy.
-4. **Legacy Standalone Mergemathica (`mergemathica/`)**:
-   - Preserved intact for legacy links / App Store reviews, but removed from home page navigation in favor of BrainIQue.
+* **Active Focus:** Maintenance, documentation modernization, and asset preparation for BrainIQue sub-games.
+* **BrainIQue Suite Architecture:**
+  * Primary suite showcase live at [`BrainIQue/brainique.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/brainique.html) with 5 game cards.
+  * Suite privacy live at [`BrainIQue/privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/privacy.html).
+  * 5 dedicated sub-game pages established under [`BrainIQue/games/`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/):
+    * `mergemathica/mergemathica.html`
+    * `thumbstack/thumbstack.html`
+    * `moduku/moduku.html`
+    * `ohmyword/ohmyword.html`
+    * `woahdle/woahdle.html`
+* **Layout & Grid Refactor:**
+  * Fixed card column squishing by separating "Games Included" and "Features & Design" onto independent full-width grid rows (`#games` and `#features` with `grid-column: 1 / -1`).
+* **Git Status:**
+  * Branch: `main` up-to-date with remote (`origin/main`).
+  * Most recent commit: `4db50ad` ("feat: add BrainIQue suite product hub and 5 sub-game pages").
 
-## Relative Path Conventions
-- **Root (`/`)**:
-  - Stylesheet: `./styles.css`
-  - Brand icon: `./CCSquare.png`
-- **First-level (`/BrainIQue/`, `/gravemistake/`, `/knowitpad/`)**:
-  - Stylesheet: `../styles.css`
-  - Brand icon: `../CCSquare.png`
-  - Home: `../index.html`
-- **Sub-game level (`/BrainIQue/games/<game>/`)**:
-  - Stylesheet: `../../styles.css`
-  - Brand icon: `../../CCSquare.png`
-  - Hub: `../../brainique.html`
-  - Home: `../../../index.html`
-  - Suite Privacy: `../../privacy.html`
+---
 
-## Status & Next Steps
-- [x] Initialized `PROJECT_STATE.md` and updated `AGENTS.md`.
-- [x] BrainIQue suite structure created (`BrainIQue/` and `BrainIQue/games/`).
-- [ ] Home page navigation updated to showcase BrainIQue.
-- [ ] BrainIQue suite product page and privacy policy generated.
-- [ ] Five sub-game pages generated with rich content based on game rules and design specs.
-- [ ] Route and link integrity verified.
+## Lessons Learned & Error Prevention Rules
+
+1. **3-Tier Relative Path Nesting:**
+   * Pages located in `BrainIQue/games/<game>/<game>.html` are 3 directories deep.
+   * Root assets (`styles.css`, `CCSquare.png`, `assets/`, `scripts/`) must reference `../../../` (never `../../`).
+   * Suite links (e.g. BrainIQue hub, suite privacy) reference `../../` (e.g. `../../brainique.html`).
+
+2. **Full-Width Project Card Grids:**
+   * The default `.content-grid` is a 2-column layout (`1.4fr` / `0.85fr`).
+   * Never place a multi-card `.project-list` inside a shared 2-column `.content-grid` alongside an `aside.panel`. It must always occupy a standalone row styled with `.site-page #<id>.content-grid { grid-template-columns: minmax(0, 1fr); width: 100%; }` and `grid-column: 1 / -1`.
+
+3. **Workspace Boundary:**
+   * NEVER edit files in the native apps repository (`/Users/natie/Code/Carrot Core/Games/Brainique`). That repo is strictly for read-only game rules and description references.
+
+---
+
+## Pending Work & Backlog
+
+* [ ] Add official screenshots and game-specific icons for Thumbstack, Moduku, Oh My Word!, and Woahdle once provided by the owner.
+* [ ] Remove `.DS_Store` across the repo, untrack `mergemathica/.DS_Store`, and commit root `.gitignore`.
+* [ ] Verify Knowitpad product and privacy page when ready to publish on the homepage.

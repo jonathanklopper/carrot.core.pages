@@ -1,149 +1,77 @@
 # Project Context
 
-This is a static GitHub Pages site for Carrot Core Creations.
+This is a static marketing and documentation website for Carrot Core Creations, hosted on GitHub Pages with Cloudflare custom domain routing (`carrot-core.com`).
+
+---
 
 ## Site Map
 
-- [index.html](./index.html)
-  - Landing page
-  - Links to BrainIQue and Grave Mistake
-- [BrainIQue/brainique.html](./BrainIQue/brainique.html)
-  - BrainIQue puzzle suite product page (hub for 5 sub-games)
-- [BrainIQue/privacy.html](./BrainIQue/privacy.html)
-  - BrainIQue privacy page
-- [BrainIQue/games/mergemathica/mergemathica.html](./BrainIQue/games/mergemathica/mergemathica.html)
-  - Mergemathica sub-game page
-- [BrainIQue/games/thumbstack/thumbstack.html](./BrainIQue/games/thumbstack/thumbstack.html)
-  - Thumbstack sub-game page
-- [BrainIQue/games/moduku/moduku.html](./BrainIQue/games/moduku/moduku.html)
-  - Moduku sub-game page
-- [BrainIQue/games/ohmyword/ohmyword.html](./BrainIQue/games/ohmyword/ohmyword.html)
-  - Oh My Word! sub-game page
-- [BrainIQue/games/woahdle/woahdle.html](./BrainIQue/games/woahdle/woahdle.html)
-  - Woahdle sub-game page
-- [gravemistake/gravemistake.html](./gravemistake/gravemistake.html)
-  - Grave Mistake product page
-- [gravemistake/privacy.html](./gravemistake/privacy.html)
-  - Grave Mistake privacy page
-- [knowitpad/knowitpad.html](./knowitpad/knowitpad.html)
-  - Knowitpad product page
-- [knowitpad/privacy.html](./knowitpad/privacy.html)
-  - Knowitpad privacy page
-- [mergemathica/mergemathica.html](./mergemathica/mergemathica.html)
-  - Legacy standalone Mergemathica product page (intact, not linked from home)
-- [mergemathica/privacy.html](./mergemathica/privacy.html)
-  - Legacy standalone Mergemathica privacy page
+* [`index.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/index.html) — Studio landing page (hero, projects grid, about panel, privacy link)
+* [`BrainIQue/brainique.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/brainique.html) — BrainIQue puzzle suite product hub
+* [`BrainIQue/privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/privacy.html) — BrainIQue suite privacy policy
+* [`BrainIQue/games/mergemathica/mergemathica.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/mergemathica/mergemathica.html) — Mergemathica sub-game page
+* [`BrainIQue/games/thumbstack/thumbstack.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/thumbstack/thumbstack.html) — Thumbstack sub-game page
+* [`BrainIQue/games/moduku/moduku.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/moduku/moduku.html) — Moduku sub-game page
+* [`BrainIQue/games/ohmyword/ohmyword.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/ohmyword/ohmyword.html) — Oh My Word! sub-game page
+* [`BrainIQue/games/woahdle/woahdle.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/BrainIQue/games/woahdle/woahdle.html) — Woahdle sub-game page
+* [`gravemistake/gravemistake.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/gravemistake/gravemistake.html) — Grave Mistake product page
+* [`gravemistake/privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/gravemistake/privacy.html) — Grave Mistake privacy page
+* [`knowitpad/knowitpad.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/knowitpad/knowitpad.html) — Knowitpad product page
+* [`knowitpad/privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/knowitpad/privacy.html) — Knowitpad privacy page
+* [`mergemathica/mergemathica.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/mergemathica/mergemathica.html) — Legacy standalone Mergemathica product page (kept intact)
+* [`mergemathica/privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/mergemathica/privacy.html) — Legacy standalone Mergemathica privacy page
+* [`privacy.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/privacy.html) — Umbrella privacy policy
+* [`support.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/support.html) — Support & feedback routing
+* [`thankyouforyourfeedback.html`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/thankyouforyourfeedback.html) — Feedback confirmation page
 
-## Shared Styling
+---
 
-- [styles.css](./styles.css) is the shared stylesheet for the whole site
-- `site-page` drives landing/product page styling
-- `policy-page` drives privacy page styling
+## Shared Styling & Design System
 
-Important shared UI behaviors:
+* [`styles.css`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/styles.css) is the central stylesheet for the whole site.
+* `body.site-page` drives landing and product page styling.
+* `body.policy-page` drives privacy policy styling.
+* Design principles:
+  * Apple Liquid Glass frosted translucent material design
+  * Warm color palette (`--surface`, `--surface-strong`, `--accent`)
+  * Standardized centered footer with `CCSquare.png` and copyright
 
-- Shared theme toggle
-- Shared centered footer treatment
-- Shared warm color palette
+---
 
-## Shared Theme Logic
+## Relative Path Conventions
 
-Each page currently contains a small inline script that:
+* **From Root (`/`):**
+  * Stylesheet: `./styles.css`
+  * Brand icon: `./CCSquare.png`
+* **From Product / Privacy subfolders (Level 1, e.g. `/BrainIQue/`, `/gravemistake/`):**
+  * Stylesheet: `../styles.css`
+  * Brand icon: `../CCSquare.png`
+  * Home: `../index.html`
+* **From Sub-game subfolders (Level 2, e.g. `/BrainIQue/games/<game>/`):**
+  * Stylesheet: `../../../styles.css`
+  * Brand icon: `../../../CCSquare.png`
+  * Home: `../../../index.html`
+  * Suite Hub: `../../brainique.html`
 
-- reads `localStorage.getItem("carrot-core-creations-theme")`
-- falls back to `prefers-color-scheme`
-- writes `data-theme` to the root HTML element
-- updates the toggle button label
+---
 
-If theme behavior changes, update all pages consistently.
+## Local Verification Commands
 
-## Relative Path Rules
-
-From root:
-
-- stylesheet: `./styles.css`
-- brand icon: `./CCSquare.png`
-
-From product/privacy subfolders:
-
-- shared stylesheet: `../styles.css`
-- shared brand icon: `../CCSquare.png`
-- page-local icon: `./icon.png`
-- home page: `../index.html`
-
-Most likely regression in this repo: broken relative paths after a quick edit.
-
-## Current Content Structure
-
-Landing page currently has:
-
-- hero
-- capability strip
-- projects section
-- studio/about section
-
-Product pages currently have:
-
-- hero
-- capability strip
-- features/details
-- why/support section
-
-Privacy pages currently have:
-
-- privacy header
-- single card content block
-- centered brand footer
-
-## Known Intentional Simplicity
-
-- Privacy pages are still very similar and may be edited separately later
-- No build system is used
-- No reusable component system is used beyond shared CSS
-- Some JS is intentionally duplicated because the site is small
-
-## Editing Checklist
-
-Before editing:
-
-1. Identify whether the change is root-only, product-only, privacy-only, or shared
-2. Confirm the correct relative paths from that file
-3. Prefer shared CSS updates over duplicated styling changes
-
-After editing:
-
-1. Load affected pages via a local HTTP server
-2. Click navigation paths you changed
-3. Toggle dark/light mode once on at least one affected page
-4. Confirm the footer still looks identical across pages unless the user requested a footer change
-
-## Suggested Local Validation
-
-```sh
-python3 -m http.server 8000
-```
-
-Optional lightweight route check:
-
-```sh
+```bash
+# Link & asset verification
 python3 - <<'PY'
-from urllib.request import urlopen
-paths = [
-    'index.html',
-    'knowitpad/knowitpad.html',
-    'knowitpad/privacy.html',
-    'mergemathica/mergemathica.html',
-    'mergemathica/privacy.html',
-]
-for path in paths:
-    with urlopen(f'http://127.0.0.1:8000/{path}') as response:
-        print(response.status, path)
+import re
+from pathlib import Path
+root = Path(".")
+errors = 0
+for f in root.glob("**/*.html"):
+    text = f.read_text()
+    for link in re.findall(r'(?:href|src)=["\']([^"\']+)["\']', text):
+        if link.startswith(("http", "#", "mailto:", "itms-apps:", "macappstore:")): continue
+        target = (f.parent / link.split("?")[0]).resolve()
+        if not target.exists():
+            print(f"BROKEN: {f} -> {link}")
+            errors += 1
+if errors == 0: print("All relative links resolve 100%!")
 PY
 ```
-
-## Notes For An Incoming Agent
-
-- This repo is optimized for direct editing, not abstraction
-- Avoid replacing simple HTML with a toolchain
-- The owner prefers minimal-impact changes and practical results
-- If a request is ambiguous, preserve the existing look and fix only what is necessary
