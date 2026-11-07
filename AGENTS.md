@@ -31,13 +31,17 @@ Do not introduce React, Vue, Tailwind, Astro, Next.js, Vite, or any other framew
 
 - [index.html](./index.html): landing page
 - [styles.css](./styles.css): shared site stylesheet
+- [BrainIQue/brainique.html](./BrainIQue/brainique.html): BrainIQue puzzle suite product page
+- [BrainIQue/privacy.html](./BrainIQue/privacy.html): BrainIQue privacy page
+- [BrainIQue/games/mergemathica/mergemathica.html](./BrainIQue/games/mergemathica/mergemathica.html): Mergemathica sub-game page
+- [BrainIQue/games/thumbstack/thumbstack.html](./BrainIQue/games/thumbstack/thumbstack.html): Thumbstack sub-game page
+- [BrainIQue/games/moduku/moduku.html](./BrainIQue/games/moduku/moduku.html): Moduku sub-game page
+- [BrainIQue/games/ohmyword/ohmyword.html](./BrainIQue/games/ohmyword/ohmyword.html): Oh My Word! sub-game page
+- [BrainIQue/games/woahdle/woahdle.html](./BrainIQue/games/woahdle/woahdle.html): Woahdle sub-game page
+- [gravemistake/gravemistake.html](./gravemistake/gravemistake.html): Grave Mistake product page
 - [knowitpad/knowitpad.html](./knowitpad/knowitpad.html): Knowitpad product page
-- [knowitpad/privacy.html](./knowitpad/privacy.html): Knowitpad privacy page
-- [mergemathica/mergemathica.html](./mergemathica/mergemathica.html): Mergemathica product page
-- [mergemathica/privacy.html](./mergemathica/privacy.html): Mergemathica privacy page
+- [mergemathica/mergemathica.html](./mergemathica/mergemathica.html): Legacy standalone Mergemathica page (keep intact, not linked on home)
 - [CCSquare.png](./CCSquare.png): shared brand icon
-- [knowitpad/icon.png](./knowitpad/icon.png): Knowitpad icon
-- [mergemathica/icon.png](./mergemathica/icon.png): Mergemathica icon
 
 ## Working Style
 
@@ -55,6 +59,15 @@ Do not introduce React, Vue, Tailwind, Astro, Next.js, Vite, or any other framew
 - Do not move files unless explicitly asked.
 - Do not change page URLs casually. These paths matter for GitHub Pages:
   - `/index.html`
+  - `/BrainIQue/brainique.html`
+  - `/BrainIQue/privacy.html`
+  - `/BrainIQue/games/mergemathica/mergemathica.html`
+  - `/BrainIQue/games/thumbstack/thumbstack.html`
+  - `/BrainIQue/games/moduku/moduku.html`
+  - `/BrainIQue/games/ohmyword/ohmyword.html`
+  - `/BrainIQue/games/woahdle/woahdle.html`
+  - `/gravemistake/gravemistake.html`
+  - `/gravemistake/privacy.html`
   - `/knowitpad/knowitpad.html`
   - `/knowitpad/privacy.html`
   - `/mergemathica/mergemathica.html`

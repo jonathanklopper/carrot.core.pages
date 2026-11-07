@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moduku in BrainIQue: Dimension-shifting Sudoku and polyomino jigsaw logic puzzle across 4x4, 5x5, 6x6, 7x7, 8x8, and 9x9 grids.">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="stylesheet" href="../../../styles.css?v=20260504-hero-actions-grid">
+  <title>Moduku — BrainIQue</title>
+</head>
+<body class="site-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar-actions">
+        <a class="button button-secondary" href="../../brainique.html">Back to BrainIQue</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Moduku</h1>
+          <p class="subtitle">Dimension-shifting Sudoku &amp; polyomino jigsaw logic puzzle</p>
+          <p class="intro">
+            Moduku reimagines grid deduction with dynamic shapes and dimension-shifting challenges.
+            From brisk 4x4 grids to irregular 5x5 and 7x7 jigsaw polyominoes up to full 9x9 boards, every puzzle
+            is logically pure and guaranteed solvable with zero guesswork.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="../../brainique.html">Part of BrainIQue</a>
+            <a class="button button-secondary" href="../../privacy.html">Privacy Policy</a>
+            <a class="button button-secondary" href="https://tally.so/r/vGqN1D?app=BrainIQue-Moduku&from=web">Found a bug?</a>
+            <a class="button button-secondary" href="https://tally.so/r/aQZxvy?app=BrainIQue-Moduku&from=web">Feedback</a>
+            <a class="button button-secondary" href="https://tally.so/r/lbM6RV?app=BrainIQue-Moduku&from=web">Feature request</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="icon-panel">
+            <img src="./icon.png" alt="Moduku game icon">
+          </div>
+        </div>
+      </section>
+
+      <section class="capability-strip" id="capabilities">
+        <div>
+          <span class="metric-label">Game Style</span>
+          <span class="metric-value">Sudoku &amp; Polyomino Jigsaw</span>
+        </div>
+        <div>
+          <span class="metric-label">Designed For</span>
+          <span class="metric-value">iPhone, iPad, and Mac</span>
+        </div>
+        <div>
+          <span class="metric-label">App Suite</span>
+          <span class="metric-value"><a class="button button-secondary" href="../../brainique.html" style="padding: 6px 14px; font-size: 14px;">Included in BrainIQue</a></span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Dimension-Shifting Deductive Logic</h2>
+          <p>
+            Moduku brings fresh tactical variety to classical number placement puzzles by pairing traditional rectangular boxes with irregular polyomino jigsaw shapes.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="feature-title">Multiple Grid Dimensions</span>
+              Choose from mini 4x4, irregular 5x5 jigsaw, standard 6x6, 7x7 heptomino jigsaw, 8x8, and classic 9x9 boards.
+            </li>
+            <li>
+              <span class="feature-title">Jigsaw Polyominoes</span>
+              Irregular sub-regions bend across the grid with dynamic rotations and reflections, demanding spatial awareness alongside numerical deduction.
+            </li>
+            <li>
+              <span class="feature-title">Pure Deductive Solvability</span>
+              The built-in solver verifies unique solvability using rigorous deduction techniques (naked singles, hidden singles, pointing reductions) with guaranteed zero guessing.
+            </li>
+            <li>
+              <span class="feature-title">Geometry-Aware Keypad</span>
+              A floating popover keypad appears right at your finger, intelligently arranged to match the geometry of the selected region.
+            </li>
+            <li>
+              <span class="feature-title">Pencil Notes &amp; Error Checking</span>
+              Pencil in candidate numbers, erase with one tap, track mistakes, and keep stats synced across your devices via iCloud.
+            </li>
+          </ul>
+        </article>
+
+        <aside class="panel">
+          <h2>Strategy &amp; Highlights</h2>
+          <ul class="detail-list">
+            <li>Every puzzle has exactly one logical solution.</li>
+            <li>Zero guessing required: pure deductive reasoning.</li>
+            <li>Use pencil notes mode for multi-candidate cells.</li>
+            <li>Irregular jigsaw regions create novel intersection clues.</li>
+            <li>Crafted with native Liquid Glass and responsive touch.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="company-mark">
+        <img src="../../../CCSquare.png" alt="Carrot Core Creations logo">
+        <span>Carrot Core Creations 2026</span>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
+      }
+
+      applySystemTheme();
+
+      systemTheme.addEventListener("change", applySystemTheme);
+    }());
+  </script>
+</body>
+</html>

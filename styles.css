@@ -305,12 +305,16 @@ html[data-theme="dark"] .site-page .company-mark img {
   margin-bottom: 18px;
 }
 
-.site-page #projects.content-grid {
+.site-page #projects.content-grid,
+.site-page #games.content-grid,
+.site-page #features.content-grid {
   grid-template-columns: minmax(0, 1fr);
   width: 100%;
 }
 
-.site-page #projects > .panel {
+.site-page #projects > .panel,
+.site-page #games > .panel,
+.site-page #features > .panel {
   grid-column: 1 / -1;
   width: 100%;
   max-width: none;

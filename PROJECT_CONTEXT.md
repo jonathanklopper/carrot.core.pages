@@ -6,15 +6,33 @@ This is a static GitHub Pages site for Carrot Core Creations.
 
 - [index.html](./index.html)
   - Landing page
-  - Links to the two product pages
+  - Links to BrainIQue and Grave Mistake
+- [BrainIQue/brainique.html](./BrainIQue/brainique.html)
+  - BrainIQue puzzle suite product page (hub for 5 sub-games)
+- [BrainIQue/privacy.html](./BrainIQue/privacy.html)
+  - BrainIQue privacy page
+- [BrainIQue/games/mergemathica/mergemathica.html](./BrainIQue/games/mergemathica/mergemathica.html)
+  - Mergemathica sub-game page
+- [BrainIQue/games/thumbstack/thumbstack.html](./BrainIQue/games/thumbstack/thumbstack.html)
+  - Thumbstack sub-game page
+- [BrainIQue/games/moduku/moduku.html](./BrainIQue/games/moduku/moduku.html)
+  - Moduku sub-game page
+- [BrainIQue/games/ohmyword/ohmyword.html](./BrainIQue/games/ohmyword/ohmyword.html)
+  - Oh My Word! sub-game page
+- [BrainIQue/games/woahdle/woahdle.html](./BrainIQue/games/woahdle/woahdle.html)
+  - Woahdle sub-game page
+- [gravemistake/gravemistake.html](./gravemistake/gravemistake.html)
+  - Grave Mistake product page
+- [gravemistake/privacy.html](./gravemistake/privacy.html)
+  - Grave Mistake privacy page
 - [knowitpad/knowitpad.html](./knowitpad/knowitpad.html)
   - Knowitpad product page
 - [knowitpad/privacy.html](./knowitpad/privacy.html)
   - Knowitpad privacy page
 - [mergemathica/mergemathica.html](./mergemathica/mergemathica.html)
-  - Mergemathica product page
+  - Legacy standalone Mergemathica product page (intact, not linked from home)
 - [mergemathica/privacy.html](./mergemathica/privacy.html)
-  - Mergemathica privacy page
+  - Legacy standalone Mergemathica privacy page
 
 ## Shared Styling
 

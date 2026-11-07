@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thumbstack in BrainIQue: A tactile reverse-Klondike solitaire played with 30 frosted glass tiles across vibrant hues.">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="stylesheet" href="../../../styles.css?v=20260504-hero-actions-grid">
+  <title>Thumbstack — BrainIQue</title>
+</head>
+<body class="site-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar-actions">
+        <a class="button button-secondary" href="../../brainique.html">Back to BrainIQue</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Thumbstack</h1>
+          <p class="subtitle">Tactile reverse-Klondike numbers solitaire with frosted glass tiles</p>
+          <p class="intro">
+            Thumbstack re-imagines classic Klondike solitaire as a swift, tactile numbers game played with
+            30 frosted glass tiles across vibrant hues. Engineered from the ground up for fluid portrait play,
+            upward tableau growth, alternating-color cascades, and responsive physics.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="../../brainique.html">Part of BrainIQue</a>
+            <a class="button button-secondary" href="../../privacy.html">Privacy Policy</a>
+            <a class="button button-secondary" href="https://tally.so/r/vGqN1D?app=BrainIQue-Thumbstack&from=web">Found a bug?</a>
+            <a class="button button-secondary" href="https://tally.so/r/aQZxvy?app=BrainIQue-Thumbstack&from=web">Feedback</a>
+            <a class="button button-secondary" href="https://tally.so/r/lbM6RV?app=BrainIQue-Thumbstack&from=web">Feature request</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="icon-panel">
+            <img src="./icon.png" alt="Thumbstack game icon">
+          </div>
+        </div>
+      </section>
+
+      <section class="capability-strip" id="capabilities">
+        <div>
+          <span class="metric-label">Game Style</span>
+          <span class="metric-value">Tactile Numbers Solitaire</span>
+        </div>
+        <div>
+          <span class="metric-label">Designed For</span>
+          <span class="metric-value">iPhone, iPad, and Mac</span>
+        </div>
+        <div>
+          <span class="metric-label">App Suite</span>
+          <span class="metric-value"><a class="button button-secondary" href="../../brainique.html" style="padding: 6px 14px; font-size: 14px;">Included in BrainIQue</a></span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Reverse-Klondike Rules &amp; Mechanics</h2>
+          <p>
+            Instead of standard card suits and face cards, Thumbstack uses a streamlined 30-tile system designed for fast, thumb-friendly sessions.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="feature-title">The Deck (30 Tiles)</span>
+              Three distinct color families — Coral ▲, Teal ◆, and Amber ● — with values 0 through 9 (10 tiles per color family).
+            </li>
+            <li>
+              <span class="feature-title">Tableau Builds UP (0 &rarr; 9)</span>
+              Five columns grow upward from the bottom control row. Stack tiles in ascending numerical order onto the next higher value of an <em>alternating</em> color.
+            </li>
+            <li>
+              <span class="feature-title">Foundations Build DOWN (9 &rarr; 0)</span>
+              Three dedicated color slots build down from 9 to 0 in exact matching colors. Placing a tile into a foundation awards points and keeps the board moving.
+            </li>
+            <li>
+              <span class="feature-title">Fast Auto-Move &amp; Cascades</span>
+              Double-tap or long-press any playable tile to immediately send it to its valid foundation or optimal column.
+            </li>
+            <li>
+              <span class="feature-title">Auto-Finish &amp; Glass Shatter</span>
+              Once stock and waste are cleared, remaining tiles automatically cascade home in rapid succession, culminating in an upward celebratory glass shatter spray.
+            </li>
+          </ul>
+        </article>
+
+        <aside class="panel">
+          <h2>Strategy &amp; Highlights</h2>
+          <ul class="detail-list">
+            <li>Build UP in the tableau with alternating colors.</li>
+            <li>Build DOWN in foundations with matching colors.</li>
+            <li>Empty columns accept any single tile or valid run.</li>
+            <li>Smooth multi-tile dragging with tactile haptic snaps.</li>
+            <li>100% native Swift 6 and Apple Liquid Glass design.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="company-mark">
+        <img src="../../../CCSquare.png" alt="Carrot Core Creations logo">
+        <span>Carrot Core Creations 2026</span>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
+      }
+
+      applySystemTheme();
+
+      systemTheme.addEventListener("change", applySystemTheme);
+    }());
+  </script>
+</body>
+</html>

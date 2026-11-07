@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Woahdle in BrainIQue: Tactical word guessing challenge across 5, 6, and 7-letter hidden words with adaptive Liquid Glass feedback.">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="stylesheet" href="../../../styles.css?v=20260504-hero-actions-grid">
+  <title>Woahdle — BrainIQue</title>
+</head>
+<body class="site-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar-actions">
+        <a class="button button-secondary" href="../../brainique.html">Back to BrainIQue</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Woahdle</h1>
+          <p class="subtitle">Tactical word guessing challenge across 5, 6, and 7 letters</p>
+          <p class="intro">
+            Woahdle takes the beloved daily word-guessing format and expands it into an adaptive, multi-length challenge.
+            Test your linguistic intuition across 5, 6, and 7-letter target words with responsive Liquid Glass keys,
+            deep dictionary curation, and streak tracking.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="../../brainique.html">Part of BrainIQue</a>
+            <a class="button button-secondary" href="../../privacy.html">Privacy Policy</a>
+            <a class="button button-secondary" href="https://tally.so/r/vGqN1D?app=BrainIQue-Woahdle&from=web">Found a bug?</a>
+            <a class="button button-secondary" href="https://tally.so/r/aQZxvy?app=BrainIQue-Woahdle&from=web">Feedback</a>
+            <a class="button button-secondary" href="https://tally.so/r/lbM6RV?app=BrainIQue-Woahdle&from=web">Feature request</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="icon-panel">
+            <img src="./icon.png" alt="Woahdle game icon">
+          </div>
+        </div>
+      </section>
+
+      <section class="capability-strip" id="capabilities">
+        <div>
+          <span class="metric-label">Game Style</span>
+          <span class="metric-value">Multi-Length Word Guessing</span>
+        </div>
+        <div>
+          <span class="metric-label">Designed For</span>
+          <span class="metric-value">iPhone, iPad, and Mac</span>
+        </div>
+        <div>
+          <span class="metric-label">App Suite</span>
+          <span class="metric-value"><a class="button button-secondary" href="../../brainique.html" style="padding: 6px 14px; font-size: 14px;">Included in BrainIQue</a></span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Word Guessing Mechanics &amp; Features</h2>
+          <p>
+            Deduce hidden words with strategic letter choices, clear visual feedback, and smooth typing.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="feature-title">Multiple Word Lengths</span>
+              Choose your challenge level by solving 5-letter, 6-letter, or 7-letter secret words.
+            </li>
+            <li>
+              <span class="feature-title">Adaptive Clue Feedback</span>
+              Color-coded board cells and keyboard keys indicate exact matches (Correct), misplaced letters (Present), and excluded characters (Absent).
+            </li>
+            <li>
+              <span class="feature-title">Anti-Repetition Window</span>
+              A 20-word rolling exclusion window prevents recently seen target words from repeating, keeping runs fresh.
+            </li>
+            <li>
+              <span class="feature-title">Hardware Keyboard Support</span>
+              Type naturally using on-screen Liquid Glass keys on iPhone or physical keyboards on iPad and Mac.
+            </li>
+            <li>
+              <span class="feature-title">Persistent Streak Tracking</span>
+              Win rates, guess distribution histograms, and streak milestones sync across all devices via iCloud.
+            </li>
+          </ul>
+        </article>
+
+        <aside class="panel">
+          <h2>Strategy &amp; Highlights</h2>
+          <ul class="detail-list">
+            <li>Start with vowel-heavy opener words.</li>
+            <li>7-letter mode offers deeper anagram and suffix deductions.</li>
+            <li>Use physical keyboards on Mac and iPad for speed.</li>
+            <li>No daily wait timers: play as many rounds as you like.</li>
+            <li>Part of the unified BrainIQue puzzle suite.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="company-mark">
+        <img src="../../../CCSquare.png" alt="Carrot Core Creations logo">
+        <span>Carrot Core Creations 2026</span>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
+      }
+
+      applySystemTheme();
+
+      systemTheme.addEventListener("change", applySystemTheme);
+    }());
+  </script>
+</body>
+</html>

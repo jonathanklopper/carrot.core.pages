@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oh My Word! in BrainIQue: Fast-paced anagram and vocabulary rounds forming 3-to-6 letter words from scrambled letters.">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="stylesheet" href="../../../styles.css?v=20260504-hero-actions-grid">
+  <title>Oh My Word! — BrainIQue</title>
+</head>
+<body class="site-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar-actions">
+        <a class="button button-secondary" href="../../brainique.html">Back to BrainIQue</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Oh My Word!</h1>
+          <p class="subtitle">Fast-paced anagram rounds and vocabulary challenges inside BrainIQue</p>
+          <p class="intro">
+            Oh My Word! tests your anagram speed and vocabulary depth. Given six scrambled letters on a tactile
+            Liquid Glass rack, assemble 3, 4, 5, and 6-letter words. Find the master word or hit the round target
+            to keep your streak advancing.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="../../brainique.html">Part of BrainIQue</a>
+            <a class="button button-secondary" href="../../privacy.html">Privacy Policy</a>
+            <a class="button button-secondary" href="https://tally.so/r/vGqN1D?app=BrainIQue-OhMyWord&from=web">Found a bug?</a>
+            <a class="button button-secondary" href="https://tally.so/r/aQZxvy?app=BrainIQue-OhMyWord&from=web">Feedback</a>
+            <a class="button button-secondary" href="https://tally.so/r/lbM6RV?app=BrainIQue-OhMyWord&from=web">Feature request</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="icon-panel">
+            <img src="./icon.png" alt="Oh My Word! game icon">
+          </div>
+        </div>
+      </section>
+
+      <section class="capability-strip" id="capabilities">
+        <div>
+          <span class="metric-label">Game Style</span>
+          <span class="metric-value">Anagram &amp; Vocabulary Rounds</span>
+        </div>
+        <div>
+          <span class="metric-label">Designed For</span>
+          <span class="metric-value">iPhone, iPad, and Mac</span>
+        </div>
+        <div>
+          <span class="metric-label">App Suite</span>
+          <span class="metric-value"><a class="button button-secondary" href="../../brainique.html" style="padding: 6px 14px; font-size: 14px;">Included in BrainIQue</a></span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Anagram Mechanics &amp; Progression</h2>
+          <p>
+            Quick, satisfying rounds designed to challenge your word recall and reveal subtle linguistic connections.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="feature-title">Dynamic Round Targets</span>
+              Each round provides 14 to 90 valid subwords organized cleanly from shortest to longest.
+            </li>
+            <li>
+              <span class="feature-title">Two Paths to Advance</span>
+              Clear the round by discovering 60% of all valid words, or immediately unlock the next round by solving the master 6-letter word.
+            </li>
+            <li>
+              <span class="feature-title">Integrated Definitions</span>
+              Tap any discovered word to instantly view its official dictionary definition without leaving the game.
+            </li>
+            <li>
+              <span class="feature-title">Smart Lexicon &amp; Bonus Words</span>
+              Built-in curated wordlists recognize valid bonus words and award credit while maintaining strict profanity guard filters.
+            </li>
+            <li>
+              <span class="feature-title">Tactile Liquid Glass Rack</span>
+              Shuffle letters, tap or drag to spell, and enjoy responsive haptic clicks on every submitted word.
+            </li>
+          </ul>
+        </article>
+
+        <aside class="panel">
+          <h2>Strategy &amp; Highlights</h2>
+          <ul class="detail-list">
+            <li>Hunt for the full 6-letter word for instant round completion.</li>
+            <li>Tap any solved word to learn its definition.</li>
+            <li>Shuffle the rack frequently to see fresh anagram combinations.</li>
+            <li>Persistent round streaks and best scores sync via iCloud.</li>
+            <li>Playable on iPhone, iPad, and Mac.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="company-mark">
+        <img src="../../../CCSquare.png" alt="Carrot Core Creations logo">
+        <span>Carrot Core Creations 2026</span>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applySystemTheme() {
+        root.setAttribute("data-theme", systemTheme.matches ? "dark" : "light");
+      }
+
+      applySystemTheme();
+
+      systemTheme.addEventListener("change", applySystemTheme);
+    }());
+  </script>
+</body>
+</html>
