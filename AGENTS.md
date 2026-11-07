@@ -1,6 +1,7 @@
 # AGENTS.md — Universal Agent Operating Guide
 
 This repository is a lightweight static marketing and documentation website for **Carrot Core Creations**, hosted on GitHub Pages (custom domain `carrot-core.com` via Cloudflare).
+This is to have a goto page for everything I do and have out in the wild online.
 
 This file is the **universal operating guide for all AI coding agents** (Antigravity/Gemini, OpenCode/Qwen, Claude Code, and ChatGPT/Codex).
 Read this file first, then consult [`docs/project-map.md`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/docs/project-map.md) and [`PROJECT_STATE.md`](file:///Users/natie/Code/Carrot%20Core/carrot-core-pages.com/PROJECT_STATE.md) before making changes.
